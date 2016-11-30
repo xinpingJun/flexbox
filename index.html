@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="flex.css" />
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				font-family: "微软雅黑";
+				font-size:16px;
+				color: #607D8B;
+				margin: 0 15px;
+			}
+			.box {
+				height: 200px;
+				width: 200px;
+                background: #3280fc!important;
+				margin: 15px auto;
+			}
+			
+			.item {
+				height: 10px;
+				width: 10px;
+				margin: 5px;
+				background: #fff;
+			}
+			
+			.item2 {
+				height: auto;
+				width: 10px;
+				margin: 5px;
+				background: #fff;
+			}
+			h1{
+				text-align: center;
+				margin: 15px 0 ;
+			}
+			h2{
+				margin: 15px 0;
+			}
+			ul {
+				list-style: none;
+			}
+            span {
+				text-align: left;
+				display: block;
+				color: #262626;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>flex 布局实例</h1>
+		<h2>以下属性设置在容器上</h2>
+		<ul class="flex flex-center">
+			<li>
+				<h3> flex-direction   项目的排列方式</h3>
+
+				<span>起点默认x轴左端  .flex-row {flex-direction: row;}  </span>
+				<span>起点默认y轴上沿  .flex-column {flex-direction: column;  </span>
+				<span>反方向  .flex-row-reverse {flex-direction: row-reverse;}  </span>
+				<span>反方向  .flex-column-reverse {flex-direction: column-reverse;  </span>
+
+				<div class="box flex  flex-row">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+				<div class="box flex  flex-column">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+			</li>
+			<li>
+				<h3> flex-wrap  :如果一条轴线排不下，如何换行。</h3>
+				<span>换行.flex-wrap {flex-wrap: wrap;}</span>
+				<span>不换行.flex-nowrap {flex-wrap: nowrap;</span>
+				<div class="box flex   flex-wrap">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+				<div class="box flex  flex-nowrap">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+			</li>
+			<li>
+				<h3>justify-content:属性定义项目在x轴上如何对齐。</h3>
+				<span>两端对齐.space-between {justify-content: space-between;}</span>
+				<span> 左对齐 .justify-start {justify-content: flex-start;}</span>
+				<span>右对齐.justify-end {justify-content: flex-end;} </span>
+				<span>水平居中.justify-center {justify-content: center;}</span>
+				<div class="box flex space-between">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+
+				<div class="box flex justify-start">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+
+				<div class="box flex justify-end">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+
+				<div class="box flex justify-center">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+			</li>
+			<li>
+				<h3>align-items :属性定义项目在Y轴上如何对齐。</h3>
+				<span>垂直居中.align-middle {align-items: center;}</span>
+				<span> 左上角.align-start {align-items: flex-start;}</span>
+				<span>左下角 .align-end {align-items: flex-end;} </span>
+				<span> 展开.stretch {align-items: stretch;}</span>
+				<div class="box flex align-middle">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+
+				<div class="box flex align-start">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+
+				<div class="box flex align-end">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+				<div class="box flex stretch">
+					<div class="item2"></div>
+					<div class="item2"></div>
+					<div class="item2"></div>
+				</div>
+			</li>
+			<li>
+				<h3> 水平垂直居中   .flex-center  </h3>
+				<span>          .flex-center { justify-content: center; align-items: center; }</span>
+				<div class="box flex flex-center">
+					<div class="item"></div>
+				</div>
+			</li>
+		</ul>
+
+		<h2>以下属性设置在项目上面</h2>
+		
+		<ul class="flex flex-center ">
+			<li class="flex-auto"> 
+				<h3> order  : 定义排序 </h3>
+				<span>.flex-first {order: -1;}</span>
+				<span>.flex-last {order: 1;}</span>
+				<div class="box flex ">
+					<div class="item "></div>
+					<div class="item flex-first" style="background: red;"></div>
+					<div class="item"></div>
+				</div>
+				<div class="box flex ">
+					<div class="item "></div>
+					<div class="item flex-last" style="background: red;"></div>
+					<div class="item"></div>
+				</div>
+			</li>
+			<li class="flex-auto">
+				<h3> flex  : 子元素分配空间 </h3>
+				<span> .flex-auto {flex: auto;} </span>
+				<span> .flex-none {flex: none;}</span>
+				<div class="box flex ">
+					<div class="item "></div>
+					<div class="item flex-auto"></div>
+					<div class="item"></div>
+				</div>
+				<div class="box flex ">
+					<div class="item flex-auto"></div>
+					<div class="item flex-auto"></div>
+					<div class="item flex-auto"></div>
+				</div>
+				<div class="box flex ">
+					<div class="item flex-auto"></div>
+					<div class="item flex-none"></div>
+					<div class="item flex-auto"></div>
+				</div>
+			</li>
+			<li class="flex-auto">
+				<h3>  align-self   :属性允许单个项目有与其他项目不一样的对齐方式 </h3>
+				<span>.selft-stretch {align-self: stretch;}</span>
+				<span>.align-self-start {align-self: flex-start;} </span>
+				<span>.align-self-end {align-self:flex-end;} </span>
+				<span>.align-self-middle {align-self: center;}</span>
+				<div class="box flex ">
+					<div class="item "></div>
+					<div class="item align-self-start"></div>
+					<div class="item"></div>
+				</div>
+				<div class="box flex ">
+					<div class="item "></div>
+					<div class="item align-self-end"></div>
+					<div class="item"></div>
+				</div>
+				<div class="box flex ">
+					<div class="item "></div>
+					<div class="item align-self-middle"></div>
+					<div class="item"></div>
+				</div>
+                <div class="box flex ">
+                    <div class="item "></div>
+                    <div class="item2 align-self-stretch"></div>
+                    <div class="item"></div>
+                </div>
+			</li>
+		</ul>
+	</body>
+
+</html>
